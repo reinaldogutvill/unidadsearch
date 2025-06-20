@@ -1,40 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# UnidadSearch – Multilingual Immigrant Resource Search Tool
 
-## Getting Started
+UnidadSearch is a lightweight, multilingual web app designed to help immigrants quickly find trusted legal and procedural resources related to U.S. immigration. The tool is tailored for individuals navigating immigration proceedings — especially those without legal representation — and is offered freely for public use and nonprofit adaptation.
 
-First, run the development server:
+## 🌐 What It Does
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ✅ Accepts natural-language questions from users (e.g. *"How do I check my court date?"*)
+- ✅ Supports dynamic clarification through simple follow-up questions (e.g. *"Do you have a lawyer?"*)
+- ✅ Refines queries based on user context (city, legal status, language)
+- ✅ Returns trustworthy links only — government (.gov), nonprofit (.org), and community legal support pages
+- ✅ Interface is available in: **English, Spanish, French, Arabic, and Chinese**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ How It Works
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+UnidadSearch is built with:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Next.js (React)** for the frontend
+- A lightweight backend API that queries a search engine using refined terms
+- AI-assisted logic that helps determine the user’s “query intent” and generates clarifying suggestions (e.g. whether their question involves emergency court issues, work permits, or asylum deadlines)
+- **No AI is used to generate the answers** — only to guide and refine the search query itself. All search results are sourced directly from external, verifiable websites.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+> ⚠️ **Important**: UnidadSearch does not provide legal advice. It is an informational tool that routes users to public resources.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤖 Acknowledging AI Use
 
-## Learn More
+AI assistance (via OpenAI’s GPT) was used in:
 
-To learn more about Next.js, take a look at the following resources:
+- Developing the query classification logic
+- Generating and translating multilingual UI text
+- Structuring the follow-up logic to support non-expert users
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+We intentionally avoided using AI to generate legal information or responses. All legal content surfaced in results comes from external, publicly trusted sources.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Features Still in Development
 
-## Deploy on Vercel
+- Additional language support (Tagalog, Haitian Creole)
+- Offline mode for saved information
+- Admin dashboard for nonprofits to track user questions anonymously
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Who It's For
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+UnidadSearch was designed with and for:
+- Pro se respondents in immigration proceedings
+- Community-based legal aid organizations
+- Volunteers, interpreters, and advocates helping individuals navigate immigration
+
+We welcome collaborators and feedback from nonprofit orgs, public defenders, and legal educators.
+
+App is currently functional: unidadsearch.vercel.app
